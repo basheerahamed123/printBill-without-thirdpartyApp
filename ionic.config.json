@@ -1,0 +1,7 @@
+{
+  "name": "billPrintExample",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Bill
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <h2>Bill Details</h2>
+      <p><strong>Date:</strong> {{ billDate }}</p>
+      <p><strong>Customer Name:</strong> {{ customerName }}</p>
+      <p><strong>Items:</strong></p>
+      <ion-list>
+        <ion-item *ngFor="let item of billItems">
+          {{ item.name }} - {{ item.price }}
+        </ion-item>
+      </ion-list>
+      <h3>Total: {{ totalAmount }}</h3>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button expand="full" (click)="printBill()">Print Bill</ion-button>
+</ion-content>
